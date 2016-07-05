@@ -42,9 +42,10 @@ if __name__ == '__main__':
     A = A.tocsc() #coo_matrix.tocsc()Return a copy of this matrix in Compressed Sparse Column format -> questo mi serve per passare la matrice in un formato adatto per linalg
     start = time.time() #Start Time
     x = scipy.sparse.linalg.spsolve(A, b, use_umfpack=True) #risolvo
-    print "Sparse Direct Solvers" 
-    print "Memory:"
-    print process.memory_info().rss # Stampo la memoria utilizzata per il calcolo della soluzione del sistema
+    print "Sparse Direct Solvers {" 
+    print "\n"
+    print "Memory (kiloBytes):"
+    print process.memory_info().rss # Stampo la memoria utilizzata per il calcolo della soluzione del sistema  -> kiloBytes
     print "\n"
     end = time.time() #Stop Time
     time = end - start
@@ -54,4 +55,5 @@ if __name__ == '__main__':
     print "\n"
     print "Error:"
     print error
-    
+    print "\n"
+    print "}"
