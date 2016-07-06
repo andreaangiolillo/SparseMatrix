@@ -38,9 +38,9 @@ if __name__ == '__main__':
 ####################################################################################################################    
 #scikit-umfpack
     A = A.tocsc() #coo_matrix.tocsc()Return a copy of this matrix in Compressed Sparse Column format -> Questo mi serve per adattare la matrice alla libreria
+    start = time.time() #Start Time
     x = umfpack.spsolve(A, b)
     print "scikit-umfpack {"
-    start = time.time() #Start Time
     print "\n"
     print "Memory (kiloBytes):"
     print process.memory_info().rss # Stampo la memoria utilizzata per il calcolo della soluzione del sistema  -> kiloBytes
