@@ -1,6 +1,6 @@
 # SparseMatrix
 
-This software implemets the resolution of sparse matrixs by using the followinG library of Python:
+This software implements the resolution of sparse matrices by using the followinG library of Python:
 
 1)Numpy
 
